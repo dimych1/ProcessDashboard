@@ -1,0 +1,15 @@
+<!-- Sidebar -->
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+  <ul id="sidebar_menu" class="sidebar-nav">
+    <li class="sidebar-brand">
+      <a id="menu-toggle">Menu</a>
+    </li>
+  </ul>
+  <ul class="sidebar-nav" id="sidebar">
+    <li *ngFor="let hero of projectPresentationService.listProjects" (click)="selectThisEvent(hero)">
+      <a [ngStyle]="{'color':(hero==projectPresentationService.selectedProject?'white':'')}">{{hero.project}} </a>
+    </li>
+  </ul>
+
+</div>

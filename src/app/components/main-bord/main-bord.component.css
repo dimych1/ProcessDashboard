@@ -1,0 +1,16 @@
+#wrapper {
+    padding-left: 150px;
+    transition: all .4s ease 0s;
+    height: 100%;
+    width: 99%;
+}
+
+@media (max-width:767px) {
+    #wrapper {
+        padding-left: 150px;
+        transition: all .4s ease 0s;
+    }
+}
+#wrapper.active {
+    padding-left: 150px;
+  }
