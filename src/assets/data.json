@@ -13,14 +13,34 @@
             "MODEL":"T&M",
             "Cynefin":"4",
             "RANK":"0",
-            "OWNER":"Hanokh",
+            "OWNER":"Hanokh", 
             "desirableManpower":3,
             "actualManpower":3,
             "manpower":"Vadim, Chavi, Yafit",
             "startDate":"14/11/2017",
             "EstimatedDate":"14/11/2018",
             "ActualFinishDate":"14/11/2017",
-            "JIRA":"ELTAACF",
+            "JIRA":{
+               "Name": "ELTAACF",
+               "Reports":[
+                   {
+                       "Caption":"Graf 1",
+                        "Link":"https://jira-server.ngsoft.com/secure/ConfigureReport.jspa?projectOrFilterId=project-13406&periodName=weekly&daysprevious=450&cumulative=true&versionLabels=all&selectedProjectId=13406&reportKey=com.atlassian.jira.plugin.system.reports%3Acreatedvsresolved-report&Next=Next"
+                   },
+                   {
+                       "Caption":"Graf  2",
+                        "Link":"https://jira-server.ngsoft.com/secure/ConfigureReport.jspa?projectOrFilterId=project-13406&periodName=weekly&daysprevious=360&selectedProjectId=13406&reportKey=com.atlassian.jira.plugin.system.reports%3Aaverageage-report&Next=Next"
+                   },
+                   {
+                       "Caption":"Report 1",
+                        "Link":"https://jira-server.ngsoft.com/issues/?jql=project%20%3D%20PRIM%20AND%20resolution%20%3D%20Unresolved%20ORDER%20BY%20priority%20DESC"
+                   },
+                   {
+                       "Caption":"Report 2",
+                        "Link":"https://jira-server.ngsoft.com/issues/?jql=project%20%3D%20PRIM%20ORDER%20BY%20priority%20DESC"
+                   }
+                ]
+            },
             "jenkins":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "sharepoint":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "SVN":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
@@ -31,7 +51,7 @@
             "URLToDemoSite":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx"
         },
         {
-            "id":29,
+            "id":28,
             "active":true,
             "customerID":421,
             "customer":"קרן אור",
@@ -50,7 +70,23 @@
             "startDate":"14/11/2017",
             "EstimatedDate":"14/11/2018",
             "ActualFinishDate":"14/11/2017",
-            "JIRA":"ELTAACF",
+            "JIRA":{
+               "Name": "ELTAACF",
+               "Reports":[
+                   {
+                       "Caption":"Graf 1",
+                        "Link":"https://jira-server.ngsoft.com/secure/ConfigureReport.jspa?projectOrFilterId=project-13406&periodName=weekly&daysprevious=450&cumulative=true&versionLabels=all&selectedProjectId=13406&reportKey=com.atlassian.jira.plugin.system.reports%3Acreatedvsresolved-report&Next=Next"
+                   },
+                   {
+                       "Caption":"Graf  2",
+                        "Link":"https://jira-server.ngsoft.com/secure/ConfigureReport.jspa?projectOrFilterId=project-13406&periodName=weekly&daysprevious=360&selectedProjectId=13406&reportKey=com.atlassian.jira.plugin.system.reports%3Aaverageage-report&Next=Next"
+                   },
+                   {
+                       "Caption":"Report 1",
+                        "Link":"https://jira-server.ngsoft.com/issues/?jql=project%20%3D%20PRIM%20ORDER%20BY%20priority%20DESC"
+                   }
+                ]
+            },
             "jenkins":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "sharepoint":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "SVN":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
@@ -61,8 +97,8 @@
             "URLToDemoSite":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx"
         },
         {
-            "id":29,
-            "active":true,
+            "id":24,
+            "active":false,
             "customerID":421,
             "customer":"תוכנית אב לתחבורה - ירושלים",
             "taskNumber":1671,
@@ -80,7 +116,23 @@
             "startDate":"14/11/2017",
             "EstimatedDate":"14/11/2018",
             "ActualFinishDate":"14/11/2017",
-            "JIRA":"ELTAACF",
+            "JIRA":{
+               "Name": "ELTAACF",
+               "Reports":[
+                   {
+                       "Caption":"Graf 1",
+                        "Link":"https://jira-server.ngsoft.com/secure/ConfigureReport.jspa?projectOrFilterId=project-13406&periodName=weekly&daysprevious=450&cumulative=true&versionLabels=all&selectedProjectId=13406&reportKey=com.atlassian.jira.plugin.system.reports%3Acreatedvsresolved-report&Next=Next"
+                   },
+                   {
+                       "Caption":"Report 1",
+                        "Link":"https://jira-server.ngsoft.com/issues/?jql=project%20%3D%20PRIM%20AND%20resolution%20%3D%20Unresolved%20ORDER%20BY%20priority%20DESC"
+                   },
+                   {
+                       "Caption":"Report 2",
+                        "Link":"https://jira-server.ngsoft.com/issues/?jql=project%20%3D%20PRIM%20ORDER%20BY%20priority%20DESC"
+                   }
+                ]
+            },
             "jenkins":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "sharepoint":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",
             "SVN":"https://sharepoint.ngsoft.com/Keren%20Or/Home.aspx",

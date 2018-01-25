@@ -8,7 +8,12 @@ export class ProjectPresentationService {
   loadProgect() {
     this.projectMaintenanceService.getProjects()
       .subscribe(
-      data => this.listProjects = data.events;
+      (data:any) => {
+        this.listProjects = data['events'];
+        if (this.listProjects.length > 0) {
+          this.selectedProject = this.listProjects[0];
+        }
+      }
       );
   }
   setSelectedProject(selectedProject: any) { this.selectedProject = selectedProject; }

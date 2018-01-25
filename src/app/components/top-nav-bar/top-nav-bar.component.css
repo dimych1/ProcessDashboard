@@ -1,0 +1,15 @@
+.navbar {
+    position: relative;
+    min-height: 65px;
+    margin-bottom: 1px;
+    border: 1px solid transparent;
+    border-radius: 0;
+}
+
+.navbar .nav > li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* Internet Explorer 7 compatibility */
+    *zoom:1;
+    vertical-align: top;
+}

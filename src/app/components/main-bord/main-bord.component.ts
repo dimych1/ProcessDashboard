@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectPresentationService } from '../../services/project-presentation.service';
 
 @Component({
   selector: 'app-main-bord',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainBordComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectPresentationService: ProjectPresentationService) { }
 
   ngOnInit() {
   }

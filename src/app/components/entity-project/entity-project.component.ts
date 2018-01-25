@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectPresentationService } from '../../srevices/project-presentation.service';
+import { Component, OnInit ,Input} from '@angular/core';
+import { ProjectPresentationService } from '../../services/project-presentation.service';
 
 @Component({
   selector: 'app-entity-project',
@@ -7,7 +7,7 @@ import { ProjectPresentationService } from '../../srevices/project-presentation.
   styleUrls: ['./entity-project.component.css']
 })
 export class EntityProjectComponent implements OnInit {
-
+  @Input() projectData: any;
   constructor(private projectPresentationService: ProjectPresentationService) { }
 
   ngOnInit() {

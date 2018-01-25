@@ -1,45 +1,58 @@
 <!-- Page content -->
-<div id="page-content-wrapper">
+<div  *ngIf="projectData">
   <!-- Keep all page content within the page-content inset div! -->
-  <div class="page-content inset">
-    <div class="row">
-      <div class="col-md-12">
-        <p class="well lead">Cadastro de Cliente</p>
-        <div class="container" *ngIf="projectPresentationService.selectedProject">
-            <div class="row"><div class="col-xs-2">id</div><div class="col-xs-10">{{projectPresentationService.selectedProject.id}}</div></div>
-            <div class="row"><div class="col-xs-2">active</div><div class="col-xs-10">{{projectPresentationService.selectedProject.active}}</div></div>
-            <div class="row"><div class="col-xs-2">customerID</div><div class="col-xs-10">{{projectPresentationService.selectedProject.customerID}}</div></div>
-            <div class="row"><div class="col-xs-2">customer</div><div class="col-xs-10">{{projectPresentationService.selectedProject.customer}}</div></div>
-            <div class="row"><div class="col-xs-2">taskNumber</div><div class="col-xs-10">{{projectPresentationService.selectedProject.taskNumber}}</div></div>
-            <div class="row"><div class="col-xs-2">project</div><div class="col-xs-10">{{projectPresentationService.selectedProject.project}}</div></div>
-            <div class="row"><div class="col-xs-2">subProject</div><div class="col-xs-10">{{projectPresentationService.selectedProject.subProject}}</div></div>
-            <div class="row"><div class="col-xs-2">priority</div><div class="col-xs-10">{{projectPresentationService.selectedProject.priority}}</div></div>
-            <div class="row"><div class="col-xs-2">TAG</div><div class="col-xs-10">{{projectPresentationService.selectedProject.TAG}}</div></div>
-            <div class="row"><div class="col-xs-2">MODEL</div><div class="col-xs-10">{{projectPresentationService.selectedProject.MODEL}}</div></div>
-            <div class="row"><div class="col-xs-2">Cynefin</div><div class="col-xs-10">{{projectPresentationService.selectedProject.Cynefin}}</div></div>
-            <div class="row"><div class="col-xs-2">RANK</div><div class="col-xs-10">{{projectPresentationService.selectedProject.RANK}}</div></div>
-            <div class="row"><div class="col-xs-2">OWNER</div><div class="col-xs-10">{{projectPresentationService.selectedProject.OWNER}}</div></div>
-            <div class="row"><div class="col-xs-2">desirableManpower</div><div class="col-xs-10">{{projectPresentationService.selectedProject.desirableManpower}}</div></div>
-            <div class="row"><div class="col-xs-2">actualManpower</div><div class="col-xs-10">{{projectPresentationService.selectedProject.actualManpower}}</div></div>
-            <div class="row"><div class="col-xs-2">manpower</div><div class="col-xs-10">{{projectPresentationService.selectedProject.manpower}}</div></div>
-            <div class="row"><div class="col-xs-2">startDate</div><div class="col-xs-10">{{projectPresentationService.selectedProject.startDate}}</div></div>
-            <div class="row"><div class="col-xs-2">EstimatedDate</div><div class="col-xs-10">{{projectPresentationService.selectedProject.EstimatedDate}}</div></div>
-            <div class="row"><div class="col-xs-2">ActualFinishDate</div><div class="col-xs-10">{{projectPresentationService.selectedProject.ActualFinishDate}}</div></div>
-            <div class="row"><div class="col-xs-2">JIRA</div><div class="col-xs-10">{{projectPresentationService.selectedProject.JIRA}}</div></div>
-            <div class="row"><div class="col-xs-2">jenkins</div><div class="col-xs-10"><a href="{{projectPresentationService.selectedProject.jenkins}}">jenkins</a></div></div>
-            <div class="row"><div class="col-xs-2">sharepoint</div><div class="col-xs-10"><a href="{{projectPresentationService.selectedProject.sharepoint}}">sharepoint</a></div></div>
-            <div class="row"><div class="col-xs-2">SVN</div><div class="col-xs-10"><a href="{{projectPresentationService.selectedProject.SVN}}">SVN</a></div></div>
-            <div class="row"><div class="col-xs-2">Documented STR</div><div class="col-xs-10">{{projectPresentationService.selectedProject.documentedSTR}}</div></div>
-            <div class="row"><div class="col-xs-2">Linter</div><div class="col-xs-10">{{projectPresentationService.selectedProject.Linter}}</div></div>
-            <div class="row"><div class="col-xs-2">ELK</div><div class="col-xs-10">{{projectPresentationService.selectedProject.ELK}}</div></div>
-            <div class="row"><div class="col-xs-2">Production site</div><div class="col-xs-10">{{projectPresentationService.selectedProject.productionSite}}</div></div>
-            <div class="row"><div class="col-xs-2">URL to demo site</div><div class="col-xs-10">{{projectPresentationService.selectedProject.URLToDemoSite}}</div></div>
-            <div class="row"><div class="col-xs-2">project</div><div class="col-xs-10">{{projectPresentationService.selectedProject.project}}</div></div>
 
-        </div>
-        <!-- fim div da direita -->
-        </div>
-        <!-- fim div da esquerda -->
+
+  <div class="container" *ngIf="projectData" [ngStyle]="{'border-left-color':(projectData.active?'green':'red')}" style = "border-left: solid 10px">
+      <div class="row">
+          <div class="col-xs-1">{{projectData.id}}</div>
+            <div class="col-xs-11 lead">{{projectData.project}}</div>
+            <div class="col-xs-12">{{projectData.subProject}}</div>
+        </div> 
+    <div class="row">
+      <div class="col-xs-2">Customer ID</div><div class="col-xs-2">{{projectData.customerID}}</div>
+      <div class="col-xs-2">Customer</div><div class="col-xs-2">{{projectData.customer}}</div>
     </div>
+    <div class="row">
+      <div class="col-xs-2">Task Number</div><div class="col-xs-2">{{projectData.taskNumber}}</div>
+      <div class="col-xs-2">Priority</div><div class="col-xs-2">{{projectData.priority}}</div>
+      <div class="col-xs-2">TAG</div><div class="col-xs-2">{{projectData.TAG}}</div>
     </div>
+    <div class="row">
+      <div class="col-xs-2">MODEL</div><div class="col-xs-2">{{projectData.MODEL}}</div>
+      <div class="col-xs-2">Cynefin</div><div class="col-xs-2">{{projectData.Cynefin}}</div>
+      <div class="col-xs-2">RANK</div><div class="col-xs-2">{{projectData.RANK}}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">OWNER</div><div class="col-xs-2">{{projectData.OWNER}}</div>
+      <div class="col-xs-2">Desirable Manpower</div><div class="col-xs-2">{{projectData.desirableManpower}}</div>
+      <div class="col-xs-2">Actual Manpower</div><div class="col-xs-2">{{projectData.actualManpower}}</div>
+    </div>
+    <div class="row"><div class="col-xs-2">manpower</div><div class="col-xs-10">{{projectData.manpower}}</div></div>
+    <div class="row">
+      <div class="col-xs-2">Start Date</div><div class="col-xs-2">{{projectData.startDate}}</div>
+      <div class="col-xs-2">Estimated Date</div><div class="col-xs-2">{{projectData.EstimatedDate}}</div>
+      <div class="col-xs-2">Actual Finish Date</div><div class="col-xs-2">{{projectData.ActualFinishDate}}</div>
+    </div>
+    <div class="row"><app-jira-project [jira]="projectData.JIRA"></app-jira-project></div>
+    <div class="row">
+      <div class="col-xs-2">Jenkins</div><div class="col-xs-2"><a href="{{projectData.jenkins}}" target="_blank">jenkins</a></div>
+      <div class="col-xs-2">Sharepoint</div><div class="col-xs-2"><a href="{{projectData.sharepoint}}" target="_blank">sharepoint</a></div>
+      <div class="col-xs-2">SVN</div><div class="col-xs-2"><a href="{{projectData.SVN}}" target="_blank">SVN</a></div>
+    </div>
+    <div class="row"><div class="col-xs-2">Documented STR</div><div class="col-xs-10">{{projectData.documentedSTR}}</div></div>
+    <div class="row"><div class="col-xs-2">Linter</div><div class="col-xs-10">{{projectData.Linter}}</div></div>
+    <div class="row"><div class="col-xs-2">ELK</div><div class="col-xs-10">{{projectData.ELK}}</div></div>
+    <div class="row">
+      <div class="col-xs-2"><a href="{{projectData.productionSite}}" target="_blank">Production Site</a></div>
+      <div class="col-xs-2"><a href="{{projectData.URLToDemoSite}}" target="_blank">Demo Site</a></div>
+    </div>
+  </div>
+</div>
+<div class="page-content-wrapper" *ngIf="!projectData">
+  <div class="well bg-success row align-items-center justify-content-center">
+      <div class="col-xs-12 center-block align-items-center justify-content-center">
+        No data
+      </div>
+  </div>
 </div>

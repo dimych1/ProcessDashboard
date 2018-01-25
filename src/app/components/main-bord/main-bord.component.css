@@ -14,3 +14,23 @@
 #wrapper.active {
     padding-left: 150px;
   }
+
+  .page-content-wrapper {
+    padding-left: 0;
+    margin-left: -15px;
+    width: 100%;
+    height: 100%;
+    background: #111111;
+    left: 15px;
+    position: fixed;
+    z-index: 10000;
+    transition: all .4s ease 0s;
+}
+
+.well {    background: #222222;
+    color: #999999;
+    border: none;
+    padding: 0px;
+    margin-left: 0px;}
+
+.row [class*="col-"]{padding-left: 0; }
